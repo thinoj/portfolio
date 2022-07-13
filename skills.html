@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKILLS</title>
+    <link rel="icon" href="./images/T.png">
+
+    <link rel="stylesheet" media="screen and (min-width:530px)" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width:530px)" href="phone.css">    <script src="./min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            // Loop through each div element with the class box
+            $(".progress-done").each(function(){
+                var width = $(this).data('width');
+                $(this).width(width);
+               
+            });
+        });
+        </script>
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div id="overlay-menu" style="display:none;">
+    
+        <a href="./index.html" draggable="false" style="text-decoration: none;">HOME</a>
+        <a href="./skills.html" draggable="false" style="text-decoration: none;">SKILLS</a>
+        <a href="./project.html" draggable="false" style="text-decoration: none;">PROJECTS</a>
+        <a href="./contact.html" draggable="false" style="text-decoration: none;">CONTACT</a>     
+      </div>
+    <div id="top-container">
+        <div id="inner">
+       
+        <h3 id="name">THINOJ</h3>
+        <img class="icon" src="./images/menu-burger.png"></img>
+
+        </div>
+        <div id="menu">
+            <ul id="nav">
+                <li><a href="./index.html" draggable="false" style="text-decoration: none;">HOME</a></li>
+                <li><a href="./skills.html" draggable="false" style="text-decoration: none;">SKILLS</a></li>
+                <li><a href="./project.html" draggable="false" style="text-decoration: none;">PROJECTS</a></li>
+                <li><a href="./contact.html" draggable="false" style="text-decoration: none;">CONTACT</a></li>     
+            </ul>
+        </div>
+    </div>
+
+    <div id="skills">
+
+        <div class="card">
+            <div class="show-progres">
+            <h3>JAVASCRIPT</h3>
+            <div class="progress">
+                
+                <div class="progress-done" data-width="75%">
+                    75% 
+                </div>
+            </div>
+            <h3>JAVA</h3>
+            <div class="progress">
+                <div class="progress-done" data-width="70%">
+                    70% 
+                </div>
+            </div>
+            <h3>HTML</h3>
+            <div class="progress">   
+                <div class="progress-done" data-width="90%">
+                   90% 
+                </div>
+            </div>
+            <h3>CSS</h3>
+            <div class="progress">    
+                <div class="progress-done"  data-width="80%">
+                    80% 
+                </div>
+            </div>
+            <h3>DJANGO</h3>
+            <div class="progress">
+                
+                <div class="progress-done" data-width="50%">
+                    50% 
+                </div>
+            </div>
+            <h3>PYTHON</h3>
+            <div class="progress">
+                
+                <div class="progress-done" data-width="50%">
+                    50% 
+                </div>
+            </div>
+            <h3>C</h3>
+            <div class="progress">
+                
+                <div class="progress-done" data-width="50%">
+                    50% 
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="sphere">
+         <span id="sphere"
+        class="Sphere"></span>
+        </div>
+    </div>
+
+    
+
+    <!-- Including the TagCloud.js script CDN in the document    -->
+    <script src="./tagcloud.js"> </script>
+    <script>
+        const Texts = [
+            'HTML', 'CSS', 'JAVASCRIPT',
+            'REST', 'PYTHON', 'REACT',
+            'PYTHON', 'SASS',
+            'DJANGO', 'NODEJS', 'MONGODB',
+            'EXPRESS', 'MYSQL', 'JQUERY', 'JAVA'
+        ];
+
+        var tagCloud = TagCloud('.Sphere', Texts, {
+
+            // Sphere radius in px
+            radius: 230,
+
+            // animation speed
+            // slow, normal, fast
+            maxSpeed: 'fast',
+            initSpeed: 'fast',
+
+            // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
+            direction: 135,
+
+            // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
+            keep: true
+
+        });
+
+        // Giving color to each text in sphere
+        var color = '#FF5733 ';
+        document.querySelector('.Sphere').style.color = color;
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

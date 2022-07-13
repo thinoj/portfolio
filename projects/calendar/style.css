@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@500&family=Bebas+Neue&family=Josefin+Sans&family=Montserrat:ital,wght@1,700&display=swap');
+  body {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    background-color: #060606;
+  }
+  button {
+    width: 75px;
+    cursor: pointer;
+    /* box-shadow: 0px 0px 2px rgb(249, 248, 248); */
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+  }
+  
+  #monthDisplay{
+    cursor: pointer;
+  }
+
+  #header {
+    padding: 10px;
+    color: #fff;
+    
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,0 0 82px #0fa, 0 0 92px #0fa,0 0 102px #0fa,0 0 151px #0fa;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #yearViewContainer{
+    
+    display: none;
+    /* position: relative; */
+    /* background-color: rgb(0, 0, 0); */
+    width:1500px;
+    /* height: 540px; */
+  }
+
+  #yearView{
+  
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #monthView{
+    
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .monthWindow{
+    width: 210px;
+    /* padding: 10px; */
+    height: 230px;
+    
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: hsl(0, 2%, 78%);
+    /* margin: auto;  */
+    margin-left: 33px;
+    margin-top: 50px;
+    margin-bottom: 6px;
+    display: flex;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    pointer-events: null;
+    box-shadow: #8f9288;
+  }
+
+  #yearViewHeader{
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #currYear{
+    color: #0fa;
+    background-color: transparent;
+    font-size: 29px;
+    padding: 10px;
+    margin-right: 200px;
+    margin-left: 200px;
+    font-family: 'Bebas Neue', cursive;
+  }
+
+  #prevYear , #nextYear{
+    color: #fff;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 230px;
+    margin-left: 200px;
+    font-family: 'Bebas Neue', cursive;
+  }
+
+  .smallDay {
+    width: 28px;
+    /* padding: 10px; */
+    height: 28px;
+    cursor: pointer;
+    padding-left: 2px;
+    /* box-sizing: border-box; */
+    /* background-color: hsl(0, 2%, 78%); */
+    /* margin: 5px; */
+    /* display: flex; */
+    /* border-radius: 7px; */
+    text-align: center;
+    flex-direction: row;
+   /* justify-content: space-between; */
+    pointer-events: null;
+    font-family: 'Akshar', sans-serif;
+  }
+  .smallWeekDate {
+    width: 28px;
+    /* padding: 10px; */
+    height: 28px;
+    cursor: pointer;
+    padding-left: 2px;
+    color: red;
+    /* box-sizing: border-box; */
+    /* background-color: hsl(0, 2%, 78%); */
+    /* margin: 5px; */
+    /* display: flex; */
+    /* border-radius: 7px; */
+    text-align: center;
+    flex-direction: row;
+   /* justify-content: space-between; */
+    pointer-events: null;
+    font-family: 'Akshar', sans-serif;
+  }
+  .smallWeekDay{
+    width: 30px;
+    height: 28px;
+    /* margin-left: 2px; */
+    /* display: flex; */
+    flex-direction: row;
+    font-weight: bolder;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+
+
+  }
+
+  #monthTitle{
+    border: 3px solid #453939b9;
+    text-align: center;
+    width: 210px;
+    height: 25px;
+    /* margin-left: 33%; */
+    color: rgb(0, 0, 0);
+    font-weight: bold;  
+    
+  }
+
+
+  .padding {
+    cursor: default;
+    background-color: #000000 ;
+    box-shadow: none ;
+  }
+
+  #header button {
+    background-color :hsl(0, 2%, 78%);
+  }
+  #container {
+    display: block;
+    width: 770px;
+  }
+  #weekdays {
+    width: 100%;
+    display: flex;
+    color: #ffffff;
+  }
+  #weekdays div {
+    width: 100px;
+    padding: 10px;
+  }
+  #calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: hsl(0, 2%, 78%);
+    margin: 5px;
+    display: flex;
+    border-radius: 7px;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: null;
+
+  }
+
+
+  .day:hover {
+    background-color: #908d8d;
+    box-shadow: 0px 0px 3px #ffffff;
+    color: white;
+  }
+  
+  .padding :hover{
+    background-color: #000000;
+    box-shadow: 0px 0px 3px #000000;
+    color: rgb(0, 0, 0);
+  }
+  
+  .day + #currentDay {
+    background-color:#8f9288;
+  }
+
+
+  .padding {
+    cursor: default;
+    background-color: #000000 ;
+    box-shadow: none ;
+  }
+
+
+select{
+  background-color :hsl(0, 2%, 78%);
+  border-radius: 3px;
+  height: 27px;
+  width: 80px;
+  cursor: pointer;
+}
+
+
+#Today{
+  top: -3%;
+}
+
+
+.innerEvent , .overlappingEvents{
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 20px;
+  background-color: #908d8d;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 10px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.event {
+  font-size: 10px;
+  padding: 3px;
+  text-shadow:#8f9288;
+  font-weight: bold;
+  
+  /* background-color: #58bae4; */
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+
+
+
+#newEvent,#alert,#edit , #overLap{
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #d5d5d5;
+  
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+  color: #000000;
+}
+#eventTitleInput , #editText {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+#saveButton, #cancelButton  , #update , #backToEvent ,#back {
+  color: #fff;
+  margin: 10%;
+  background-color: #000000;
+}
+#continue{
+  color: #fff;
+  margin: 10%;
+  background-color: #000000;
+  width: 100px;
+}
+#eventText {
+  
+  font-size: 14px;
+  color: #000000;
+  font-family: 'Josefin Sans', sans-serif;
+  
+}
+#timer{
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 3px;
+  font-weight: bold;
+}
+/* #EventBackGround {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.711);
+} */
+
+h3{
+  color: rgb(7, 7, 7);
+}
+
+#eventText{
+  color:rgb(249, 248, 248);
+}
+
+#background{
+  background-image: linear-gradient(to right, rgb(14, 12, 12) , rgb(244, 244, 5));
+  background-size: cover;
+  background-color: #ff01012a;
+}
+

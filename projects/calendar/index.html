@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App</title>
+    <link rel="icon" href="/imageSrc/calendar.png">
+
+    <link rel="stylesheet" media="screen and (min-width:530px)" href="./style.css">
+    <link rel="stylesheet" media="screen and (max-width:530px)" href="./phone.css">
+  </head>
+  <body>
+    
+    <div id="container">
+      <div id="header">
+        <div><button id="backButton"><</button></div>
+        <div id="monthDisplay"></div>
+        
+        <div class="drop">
+          
+          <form>
+            <button id="Today">Today</button>
+            <select name="MONTH" id="monthD">
+              <option value="0">JANUARY</option>
+              <option value="1">FEBRUARY</option>
+              <option value="2">MARCH</option>
+              <option value="3" selected>APRIL</option>
+              <option value="4">MAY</option>
+              <option value="5">JUNE</option>
+              <option value="6">JULY</option>
+              <option value="7">AUGUST</option>
+              <option value="8">SEPTEMBER</option>
+              <option value="9">OCTOBER</option>
+              <option value="10">NOVEMBER</option>
+              <option value="11">DECEMBER</option>
+                            
+            </select>
+            <select name="" id="yearD">
+              <option value="2001">2001</option>
+              <option value="2002">2002</option>
+              <option value="2003">2003</option>
+              <option value="2004">2004</option>
+              <option value="2005">2005</option>
+              <option value="2006">2006</option>
+              <option value="2007">2007</option>
+              <option value="2008">2008</option>
+              <option value="2009">2009</option>
+              <option value="2010">2010</option>
+              <option value="2011">2001</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+                            
+            </select> 
+          </form>
+          
+        </div>
+        <div>
+          <button id="nextButton">></button>
+        </div>
+      </div>
+
+      <div id="weekdays">
+        <div>SUNDAY</div>
+        <div>MONDAY</div>
+        <div>TUESDAY</div>
+        <div>WEDNESDAY</div>
+        <div>THURSDAY</div>
+        <div>FRIDAY</div>
+        <div>SATURDAY</div>
+      </div>
+
+      <div id="calendar"></div>
+    </div>
+
+    <div id="yearViewContainer">
+      <div id="yearView">
+        <div id="yearViewHeader">
+          <button id="prevYear">2021</button>
+          <button id="currYear">2022</button>
+          <button id="nextYear">2023</button>
+        </div>
+  
+        <div id="monthView"></div>
+  
+      </div>
+    </div>
+    <div id="background">
+    <div id="overLap">
+    </div>
+    
+    
+    <div id="newEvent">
+      <h2 style="color :rgb(0, 0, 0)">New Event</h2>
+      
+      <input id="eventTitleInput" placeholder="Event Title" />
+      <div id="timer">
+      <label for="From" style="color: rgb(7, 7, 7);">FROM : </label>
+      <input type="time"  id="from" property="disabled">
+      <label for="To" style="color: rgb(0, 0, 0);">TO : </label>
+      <input type="time" id="to">
+      <label for="allDay">All Day</label>
+      <input type="checkbox" id="allDay" onclick="checkBox()">
+      </div>
+      <button id="saveButton">SAVE</button>
+      <button id="cancelButton">CANCEL</button>
+    </div>
+
+    <div id="edit">
+      <h3>EDIT</h3>
+      <div><input type="text" id="editText"></div>
+      <div id="timer" >
+        <label for="From" style="color: rgb(7, 7, 7);">FROM : </label>
+        <input type="time"  id="newFrom" property="disabled">
+        <label for="To" style="color: rgb(0, 0, 0);">TO : </label>
+        <input type="time" id="newTo">
+        <label for="allDay">All Day</label>
+        <input type="checkbox" id="newAllDay" onclick="checkBox()">
+      </div>
+      <button id="update">UPDATE</button>
+      <button id="backToEvent">BACK</button>
+    </div>
+
+    <div id="alert">
+      <h3>Events</h2>
+
+      <p id="eventText" style="color: black;"></p>
+      <button id="add">ADD</button>
+      <button id="closeButton">Close</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  
+</html>
+
+
+
